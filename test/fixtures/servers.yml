@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hostname: MyString
+  ip_addr1: MyString
+
+two:
+  hostname: MyString
+  ip_addr1: MyString
