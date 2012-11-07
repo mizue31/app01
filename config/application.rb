@@ -60,6 +60,6 @@ module App01
     config.assets.version = '1.0'
 
     # add for Rack::Access to access restriction by IP-addresses
-    #config.middleware.use "Rack::Access", '/' => ['127.0.0.1', '192.168.1.0/24']
+    config.middleware.use "Rack::Access", '/' => ['127.0.0.1', '192.168.1.0/24', '211.126.210.249']
   end
 end
