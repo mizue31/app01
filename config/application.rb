@@ -58,5 +58,8 @@ module App01
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # add for Rack::Access to access restriction by IP-addresses
+    config.middleware.use "Rack::Access", '/' => ['127.0.0.1', '192.168.1.0/24']
   end
 end
