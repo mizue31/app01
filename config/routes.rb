@@ -1,4 +1,7 @@
 App01::Application.routes.draw do
+#  get "ballpark/index"
+  resources :ballpark, :only => [ :index ]
+
   resources :servers
 
   # The priority is based upon order of creation:
