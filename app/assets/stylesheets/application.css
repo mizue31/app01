@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+div#header, div#footer {
+  background-color: #909;
+  color: #ccc;
+}

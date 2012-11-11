@@ -1,2 +1,23 @@
-<h1>Ballpark#index</h1>
-<p>Find me in app/views/ballpark/index.html.erb</p>
+Ballpark
+
+  <% @rdc_servers = RdcServer.all(:order => "typename") %>
+  <%= form_for(:rdcserver, :url => {:action => 'calc'}) do |f| %>
+
+  <table class="rdcservers">
+    <col class="typename" />
+    <col class="spec" />
+    <col class="num" />
+
+    <% @rdc_servers.each do |rdcserver| %>
+    <tr>
+      <td><%= rdcserver.typename %></td>
+      <td><%= rdcserver.spec %></td>
+      <td><%= f.text_field :num, :size=>3, :value=>1 %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <%= f.submit "CALC" %>
+  <% end %>
+
+  <div id="result"></div>

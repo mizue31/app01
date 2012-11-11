@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  spec: MyString
+  cost1: 1
+  cost2: 1
+
+two:
+  type: 
+  spec: MyString
+  cost1: 1
+  cost2: 1

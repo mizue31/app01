@@ -1,0 +1,2 @@
+page['result'].replace_html render(:partial => "calc_result")
+

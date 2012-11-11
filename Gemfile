@@ -44,3 +44,4 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 gem 'rack-contrib', :require => 'rack/contrib'
+gem 'prototype-rails'
