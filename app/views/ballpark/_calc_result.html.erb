@@ -1,3 +1,34 @@
-<div id="result" %>
-10
+Ballpark
+
+<% @rdc_servers = RdcServer.all(:order => "typename") %>
+<%= form_tag :action => :calc, :remote=>true do %>
+
+  <table class="rdcservers">
+    <col class="typename" />
+    <col class="spec" />
+    <col class="num" />
+    <tr>
+    <th>Type</th>
+    <th>Spec</th>
+    <th>Num</th>
+    </tr>
+
+    <% @rdc_servers.each_with_index do |rs,i| %>
+    <% @rs = rs %>
+      <tr>
+        <td><%= rs.typename %></td>
+        <td><%= rs.spec %></td>
+        <td><%= text_field 'rs[]', 'num', :size=>3, :maxlength=>2, :index=>i %></td>
+      </tr>
+  <% end %>
+  </table>
+
+  <div id='submit' align='center'>
+    <%= submit_tag "CALC" %>
+  </div>
+
+<% end %>
+
+<div id="result">
+ <%= @rs %>
 </div>

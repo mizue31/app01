@@ -1,6 +1,8 @@
 App01::Application.routes.draw do
-#  get "ballpark/index"
-  resources :ballpark, :only => [ :index, :calc ]
+  #get "ballpark/index"
+  resources :ballpark, :only => [ :index ]
+
+  match 'ballpark/calc' => 'ballpark#calc'
 
   resources :servers
 
