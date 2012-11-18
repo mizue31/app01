@@ -8,12 +8,11 @@ $(($)->
       $('#result').append('<div>Done.</div>')
     )
     .live("ajax:beforeSend", (xhr)->
-      $('#result').empty()
-      $('#result').append('<div>Loading...</div>')
+      $('#result').html('<div>Loading...</div>')
     )
     .live("ajax:success", (event, data, status, xhr)->
-      $('#result').empty()
-      $('#result').append(data.result)
+      alert (data.cost)
+      $('#result').html(data.cost)
     )
     .live("ajax:error", (data, status, xhr)->
       alert("failure!!!")

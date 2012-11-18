@@ -1,0 +1,7 @@
+<tr>
+  <td><%= rdcserver.typename %></td>
+  <td><%= rdcserver.spec %></td>
+  <%= form_for num, :url => {:action => 'calc', :id => num}, :remote => true do |f| %>
+    <%= form.text_field :progress %>
+  <% end %>
+</tr>

@@ -34,3 +34,7 @@ table.rdcservers col.cost1 {
 table.rdcservers col.cost2 {  
       background-color: #ddd;  
 }  
+div.result {
+      background-color: #ccc;
+      font-size: 8pt;
+}

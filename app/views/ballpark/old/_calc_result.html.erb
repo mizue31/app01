@@ -1,7 +1,7 @@
 Ballpark
 
 <% @rdc_servers = RdcServer.all(:order => "typename") %>
-<%= form_tag('calc', :id=>"form_calc", :remote=>true) do %>
+<%= form_tag :action => :calc, :remote=>true do %>
 
   <table class="rdcservers">
     <col class="typename" />
@@ -24,11 +24,11 @@ Ballpark
   </table>
 
   <div id='submit' align='center'>
-    <%= submit_tag "Calc" %>
+    <%= submit_tag "CALC" %>
   </div>
 
 <% end %>
 
-<div id="result" class="result">
+<div id="result">
+ <%= @rs %>
 </div>
-
