@@ -10,22 +10,19 @@ class BallparkController < ApplicationController
     total = 0
     #output = ""
     output = Hash.new
-    results = Hash.new
+    res = Hash.new
+    j = Array.new
     params[:rs].each do |id, n|
-      results['item'] = @rdc_servers[id.to_i]['typename']
-      results['num']  = n['num']
-      results['cost'] = @rdc_servers[id.to_i]['cost1'] * n['num'].to_i
-      total  += results['cost']
-      output = {'item'=>results['item'], 'num'=>results['num'], 'cost'=>results['cost']}
-      j = JSON::pretty_generate(output)
-
+      res['item'] = @rdc_servers[id.to_i]['typename']
+      res['spec'] = @rdc_servers[id.to_i]['spec']
+      res['num']  = n['num']
+      res['cost'] = @rdc_servers[id.to_i]['cost1'] * n['num'].to_i
+      total  += res['cost']
+      output = {'item'=>res['item'], 'spec'=>res['spec'], 'num'=>res['num'], 'cost'=>res['cost']}
+      j[id.to_i] = output
     end
 
-    render :json => output
-    #render :json => {"aaa": "bbb"}
-    #render json: {:data => output}
-    #render :json=> {:result=>j.to_s}
-
+    render :json => j
   end
 
 end
