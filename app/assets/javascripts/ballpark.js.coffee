@@ -13,13 +13,16 @@ $(($)->
     )
     .live("ajax:success", (event, data, status, xhr)->
       html = "<col class='type' /><col class='spec' /><col class='num /><col class='cost' />"
-      html = html + "<tr><th>type</th><th>spec</th><th>num</th><th>cost</th></tr>"
+      html += "<tr><td class=title colspan=4 align=center>hardware</td></tr>"
+      html += "<tr><th>type</th><th>spec</th><th>num</th><th>arc</th></tr>"
       for o in data
-        html = html + "<tr><td>#{o["item"]}</td>"
-        html = html + "<td>#{o["spec"]}</td>"
-        html = html + "<td>#{o["num"]}</td>"
-        html = html + "<td>#{o["cost"]}</td></tr>"
+        html += "<tr><td>#{o["item"]}</td>"
+        html += "<td>#{o["spec"]}</td>"
+        html += "<td>#{o["num"]}</td>"
+        html += "<td>#{o["cost"]}</td></tr>"
+
         # (for debug) alert("#{o["item"]}#{o["num"]}#{o["cost"]}")
+
       $('#result').html(html)
     )
     .live("ajax:error", (data, status, xhr)->

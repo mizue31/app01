@@ -4,28 +4,40 @@ div#header, div#footer {
     font-color: #000080;
     font-size: 6pt;
 }
+div#ballpark {
+    margin: 0;
+    text-align: center;
+    font-size: 18pt;
+    font-family: Impact;
+}
+div#rate {
+    margin: 0;
+    text-align: center;
+    background-color: #ffffff;
+    color: #0000ee;
+    font-size: 6pt;
+}
 table.rdcservers {  
     width: 400px;  
     margin: 5px auto;  
     background-color: #eee;  
-    border-collapse: collapse;  
-    border-spacing: 0;  
+    border-collapse: collapse;
+    border-spacing: 1;
     font-size: 8pt;
 }  
       
 table.rdcservers tr {  
-      border: solid 1px #aaa;  
+      border: solid 1px #11111111;  
 }  
       
 table.rdcservers td {  
-      padding: 5px;  
+      padding: 5px;
 }  
       
-table.rdcservers col.type {  
+table.rdcservers col.type {
       background-color: #ccc;  
 }  
-      
-table.rdcservers col.spec {  
+table.rdcservers col.spec {
       background-color: #ddd;  
 }  
 table.rdcservers col.cost1 {  
@@ -35,17 +47,31 @@ table.rdcservers col.cost2 {
       background-color: #ddd;  
 }  
 table.result {
-    width: 300px;  
+    width: 400px;
     margin: 5px auto;  
-    border: solid 1px #ff00ff;
-    background-color: #ff99ff;  
+    border: solid 1px #111111;
+    background-color: #cccccc;  
     border-collapse: separate;
-    border-spacing: 0;  
+    border-spacing: 1;
     font-size: 8pt;
 }
-table.result tr {  
-      border: #000000;  
-}  
-table.result col.type {
-    background-color: #111111;  
+table.result th{
+    background-color: #aaaaaa;  
+    border-collapse: separate;
+    border-spacing: 1;  
+    font-size: 8pt;
+}
+table.result tr{
+    border: solid 1px #ffffff;  
+    text-align: center;
+    font-size: 8pt;
+}
+table.result td{
+    text-align: center;
+    font-size: 8pt;
+}
+table.result td.title{
+    background-color: #888888;  
+    font-size: 14;
+    font-family: sans-serif;
 }

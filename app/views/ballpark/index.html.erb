@@ -1,8 +1,11 @@
-Ballpark
+<div id="ballpark">ballpark</div>
 
 <% @rdc_servers = RdcServer.all(:order => "typename") %>
 <%= form_tag('calc', :id=>"form_calc", :remote=>true) do %>
 
+  <div id="rate">
+  (1SGD=<%= text_field_tag :rate, nil, :size=>3, :value => "70" %>JPY)
+  </div>
   <table class="rdcservers">
     <col class="typename" />
     <col class="spec" />
