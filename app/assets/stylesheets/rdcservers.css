@@ -14,8 +14,8 @@ div#rate {
     margin: 0;
     text-align: center;
     background-color: #ffffff;
-    color: #0000ee;
-    font-size: 6pt;
+    color: #000000;
+    font-size: 8pt;
 }
 table.rdcservers {  
     width: 400px;  
@@ -46,32 +46,35 @@ table.rdcservers col.cost1 {
 table.rdcservers col.cost2 {  
       background-color: #ddd;  
 }  
-table.result {
+table.result_tbl {
     width: 400px;
-    margin: 5px auto;  
+    margin: 8px auto;  
     border: solid 1px #111111;
-    background-color: #cccccc;  
+    background-color: #000080;  
     border-collapse: separate;
-    border-spacing: 1;
+    font-family: sans-serif;
+    color: #6a5acd;
     font-size: 8pt;
 }
-table.result th{
-    background-color: #aaaaaa;  
+table.result_tbl td.title{
+    background-color: #191970;  
+    font-size: 14;
+    font-family: sans-serif;
+    color: white;
+}
+table.result_tbl th{
+    background-color: #7b68ee;  
     border-collapse: separate;
     border-spacing: 1;  
+    color: white;
     font-size: 8pt;
 }
-table.result tr{
+table.result_tbl tr{
     border: solid 1px #ffffff;  
     text-align: center;
     font-size: 8pt;
 }
-table.result td{
+table.result_tbl td{
     text-align: center;
     font-size: 8pt;
-}
-table.result td.title{
-    background-color: #888888;  
-    font-size: 14;
-    font-family: sans-serif;
 }

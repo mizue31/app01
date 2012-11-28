@@ -4,7 +4,8 @@
 <%= form_tag('calc', :id=>"form_calc", :remote=>true) do %>
 
   <div id="rate">
-  (1SGD=<%= text_field_tag :rate, nil, :size=>3, :value => "70" %>JPY)
+  1 SGD=<%= text_field_tag :sgd_rate, nil, :size=>3, :value => "70" %>JPY,
+  1 USD=<%= text_field_tag :usd_rate, nil, :size=>3, :value => "82" %>JPY
   </div>
   <table class="rdcservers">
     <col class="typename" />
@@ -32,6 +33,5 @@
 
 <% end %>
 
-<table id="result" class="result" align=center>
-</table>
+<div id="result" class="result" align=center></div>
 
