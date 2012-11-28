@@ -24,6 +24,7 @@ $(($)->
       alert("failure!!!")
     )
 )
+
 hardware=(data)->
       total=0
       html = "<table id='result_tbl' class='result_tbl'>"
@@ -64,10 +65,11 @@ software=(data, n)->
             </tr>
 """
       for o in data
-        html += "<tr><td>#{o['item']}</td>"
-        html += "<td>#{n}</td>"
-        html += "<td>#{o['init']}</td>"
-        html += "<td>#{o['recr']}</td></tr>"
+        if n isnt 0
+          html += "<tr><td>#{o['item']}</td>"
+          html += "<td>#{n}</td>"
+          html += "<td>#{o['init']}</td>"
+          html += "<td>#{o['recr']}</td></tr>"
       html += "</table>"
 
 fte=(data, n)->

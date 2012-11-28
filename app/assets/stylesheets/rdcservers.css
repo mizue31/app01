@@ -50,20 +50,19 @@ table.result_tbl {
     width: 400px;
     margin: 8px auto;  
     border: solid 1px #111111;
-    background-color: #000080;  
+    background-color: #c0c0c0;
     border-collapse: separate;
     font-family: sans-serif;
-    color: #6a5acd;
     font-size: 8pt;
 }
 table.result_tbl td.title{
-    background-color: #191970;  
+    background-color: #696969;  
     font-size: 14;
     font-family: sans-serif;
     color: white;
 }
 table.result_tbl th{
-    background-color: #7b68ee;  
+    background-color: #808080;  
     border-collapse: separate;
     border-spacing: 1;  
     color: white;
