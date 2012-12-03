@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(:version => 20121111004048) do
     t.string   "spec"
     t.integer  "cost1"
     t.integer  "cost2"
-    t.integer  "num"
+    t.integer  "num1"
+    t.integer  "num2"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

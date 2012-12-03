@@ -14,7 +14,8 @@
     <tr>
     <th>Type</th>
     <th>Spec</th>
-    <th>Num</th>
+    <th>Num(prod)</th>
+    <th>Num(non-prod)</th>
     </tr>
 
     <% @rdc_servers.each_with_index do |rs,i| %>
@@ -22,9 +23,16 @@
       <tr>
         <td><%= rs.typename %></td>
         <td><%= rs.spec %></td>
-        <td><%= text_field 'rs[]', 'num', :size=>3, :maxlength=>2, :index=>i %></td>
+        <td><%= text_field 'rs[]', 'num1', :size=>2, :maxlength=>2, :index=>i %></td>
+        <td><%= text_field 'rs[]', 'num2', :size=>2, :maxlength=>2, :index=>i %></td>
       </tr>
   <% end %>
+      <tr>
+        <td>SAN storage</td>
+        <td>Tier2</td>
+        <td><input type="text" name="san_num1" size="4" maxlength="4" value="0">GB</td>
+        <td><input type="text" name="san_num2" size="4" maxlength="4" value="0">GB</td>
+      </tr>
   </table>
 
   <div id='submit' align='center'>

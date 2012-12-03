@@ -5,7 +5,8 @@ class CreateRdcServers < ActiveRecord::Migration
       t.string :spec
       t.integer :cost1
       t.integer :cost2
-      t.integer :num
+      t.integer :num1
+      t.integer :num2
 
       t.timestamps
     end

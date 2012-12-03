@@ -13,10 +13,10 @@ $(($)->
     )
     .live("ajax:success", (event, data, status, xhr)->
       output_html=""
-      [output_html, total] = hardware(data['hw'])
-      output_html += software(data['sw'], total)
-      output_html += fte(data['fte'], total)
-      output_html += outsource(data['outsource'], total)
+      [output_html, total1, total2] = hardware(data['hw'])
+      output_html += software(data['sw'], total1, total2)
+      output_html += fte(data['fte'], total1+total2)
+      output_html += outsource(data['outsource'], total1+total2)
 
       $('#result').html(output_html)
     )
@@ -26,32 +26,40 @@ $(($)->
 )
 
 hardware=(data)->
-      total=0
+      total1=0
+      total2=0
       html = "<table id='result_tbl' class='result_tbl'>"
       html += '''
-            <col class="VM type" />
-            <col class="num" />
-            <col class="cost" />
+            <col class="vm type" />
+            <col class="num(prod)" />
+            <col class="num(non-prod)" />
+            <col class="cost(prod)" />
+            <col class="cost(non-prod)" />
             <tr>
-            <td class=title colspan=4 align=center>hardware</td>
+            <td class=title colspan=5 align=center>hardware</td>
             </tr>
             <tr>
-            <th>VM type</th>
-            <th>num</th>
-            <th>arc(with DR)</th>
+            <th>hw item</th>
+            <th>num(prod)</th>
+            <th>num(non-prod)</th>
+            <th>arc(prod)</th>
+            <th>arc(non-prod)</th>
             </tr>
 '''
       for o in data
-        if o['num'] isnt "0"
+        if o['num1'] isnt "0" or o['num2'] isnt "0"
           html += "<tr><td>#{o['item']}(#{o['spec']})</td>"
-          html += "<td>#{o['num']}</td>"
-          html += "<td>#{o['cost']}</td></tr>"
-          total += parseInt(o['num'])
+          html += "<td>#{o['num1']}</td>"
+          html += "<td>#{o['num2']}</td>"
+          html += "<td>#{o['cost1']}</td>"
+          html += "<td>#{o['cost2']}</td></tr>"
+          total1 += parseInt(o['num1'])
+          total2 += parseInt(o['num2'])
 
       html += "</table>"
-      [html,total]
+      [html,total1,total2]
     
-software=(data, n)->
+software=(data, n1, n2)->
       html = "<table id='result_tbl' class='result_tbl'>"
       html += """
             <tr>
@@ -65,9 +73,9 @@ software=(data, n)->
             </tr>
 """
       for o in data
-        if n isnt 0
+        if n1 isnt 0 or n2 isnt 0
           html += "<tr><td>#{o['item']}</td>"
-          html += "<td>#{n}</td>"
+          html += "<td>#{o['num']}</td>"
           html += "<td>#{o['init']}</td>"
           html += "<td>#{o['recr']}</td></tr>"
       html += "</table>"
