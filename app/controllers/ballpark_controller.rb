@@ -1,14 +1,18 @@
+# Ballpark class body
 class BallparkController < ApplicationController
 
+  # index page for startup
   def index
     @rdc_servers = RdcServer.all(:order => "typename")
     render
   end
 
+  # change format of currency to 'JPY xxx'
   def currency (number)
     ActionController::Base.helpers.number_to_currency(number, :unit=>'JPY', :precision=>0, :format=>"%u %n")
   end
 
+  # calculation main procedure
   def calc
     @san = [
         {'item'=>'SAN Storage', 'spec'=>'Tier2', 'cost1'=>12.58, 'cost2'=>7.37}

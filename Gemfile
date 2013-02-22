@@ -7,6 +7,8 @@ gem 'rails', '3.2.8'
 
 group :test, :development do
   gem 'sqlite3'
+  gem 'simplecov'
+  gem 'ci_reporter'
 end
 group :production do
  gem 'pg'
@@ -45,3 +47,4 @@ gem 'jquery-rails'
 
 gem 'rack-contrib', :require => 'rack/contrib'
 gem 'prototype-rails'
+
