@@ -14,19 +14,24 @@ class BallparkController < ApplicationController
 
   # calculation main procedure
   def calc
+
     @san = [
         {'item'=>'SAN Storage', 'spec'=>'Tier2', 'cost1'=>12.58, 'cost2'=>7.37}
     ]
+
     @sw = [
         {'item'=>'CA Access Control', 'target'=>'prod', 'num'=>0, 'init'=>224.91, 'recr'=>44.98},
         {'item'=>'RSA enVision',      'target'=>'prod', 'num'=>0, 'init'=>0,      'recr'=>28.85},
-        {'item'=>'Tripwire',          'target'=>'prod', 'num'=>0, 'init'=>537,    'recr'=>107.4},
+        {'item'=>'QualysGuard PCM',          'target'=>'prod', 'num'=>0, 'init'=>0,    'recr'=>20},
         {'item'=>'Symantec EPP',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>369},
-        {'item'=>'Qualys Guard',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>23},
+        {'item'=>'QualysGuard VM',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>37.2},
     ]
+    # QG PCM => 16USD/server/year => 20SGD/server/year
+
     @fte = [
         {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000}
     ]
+
     @outsource = [
         {'item'=>'ATSS', 'init'=>75000}
     ]
