@@ -19,12 +19,13 @@ class BallparkController < ApplicationController
         {'item'=>'SAN Storage', 'spec'=>'Tier2', 'cost1'=>12.58, 'cost2'=>7.37}
     ]
 
+    # sw cost is based on USD
     @sw = [
         {'item'=>'Access Control(CA AC)', 'target'=>'prod', 'num'=>0, 'init'=>224.91, 'recr'=>44.98},
         {'item'=>'Log Monitoring(RSA enVision)',      'target'=>'prod', 'num'=>0, 'init'=>0,      'recr'=>28.85},
-        {'item'=>'Configuration Policy Compliance(QualysGuard PCM)',          'target'=>'prod', 'num'=>0, 'init'=>0,    'recr'=>20},
+        {'item'=>'Configuration Policy Compliance(QualysGuard PCM)',          'target'=>'prod', 'num'=>0, 'init'=>0,    'recr'=>16},
         {'item'=>'Anti Virus(Symantec EPP)',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>369},
-        {'item'=>'Vulnerability Management(QualysGuard VM)',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>37.2},
+        {'item'=>'Vulnerability Management(QualysGuard VM)',      'target'=>'all',  'num'=>0, 'init'=>0,      'recr'=>23},
     ]
     # QG PCM => 16USD/server/year => 20SGD/server/year
 
