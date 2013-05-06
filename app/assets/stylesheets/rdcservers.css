@@ -1,15 +1,18 @@
 /* common */
 
-div#header, div#footer {
-    margin: 0;
-    background-color: #fff;
-    font-color: #000080;
-    font-size: 6pt;
+a {
+    text-decoration: none;
+    color: #483d8b;
 }
-div#ballpark {
+div#header {
     margin: 0;
-    text-align: center;
     font-size: 48pt;
+    color: #483d8b;
+    font-family: Impact;
+}
+div#footer {
+    margin: 0;
+    font-size: 6pt;
     color: #483d8b;
     font-family: Impact;
 }
