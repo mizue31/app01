@@ -25,7 +25,7 @@ class BallparkController < ApplicationController
           number = number * @usd_rate.to_i
       end
     end
-    ActionController::Base.helpers.number_to_currency(number, :unit=>to, :precision=>0, :format=>"%u %n")
+    ActionController::Base.helpers.number_to_currency(number, :unit=>to, :precision=>2, :format=>"%u %n")
   end
 
   # calculation main procedure
