@@ -2,18 +2,18 @@
 
 a {
     text-decoration: none;
-    color: #483d8b;
+    color: #51459d;
 }
 div#header {
     margin: 0;
     font-size: 48pt;
-    color: #483d8b;
+    color: #51459d;
     font-family: Impact;
 }
 div#footer {
     margin: 0;
     font-size: 6pt;
-    color: #483d8b;
+    color: #51459d;
     font-family: Impact;
 }
 div#rate {
@@ -49,7 +49,7 @@ table.rdcservers tr {
 }  
       
 table.rdcservers td {  
-      background-color: #483d8b;
+      background-color: #51459d;
       padding: 5px;
 }  
       
@@ -79,7 +79,7 @@ table.result_tbl tr{
     font-size: 8pt;
 }
 table.result_tbl td{
-    background-color: #483d8b;
+    background-color: #51459d;
     text-align: center;
     font-size: 8pt;
 }
