@@ -28,6 +28,7 @@ $(($)->
 hardware=(data)->
       total1=0
       total2=0
+      cost=0
       html = "<table id='result_tbl' class='result_tbl'>"
       html += '''
             <col class="vm type" />
@@ -56,6 +57,9 @@ hardware=(data)->
           total1 += parseInt(o['num1'])
           total2 += parseInt(o['num2'])
 
+      html += "<tr><td>total arc</td><td colspan=4>"
+      html += o['total_cost']
+      html += "</td></tr>"
       html += "</table>"
       [html,total1,total2]
     
@@ -78,6 +82,10 @@ software=(data, n1, n2)->
           html += "<td>#{o['num']}</td>"
           html += "<td>#{o['init']}</td>"
           html += "<td>#{o['recr']}</td></tr>"
+
+      html += "<tr><td colspan=2>total</td>"
+      html += "<td>#{o['cost_init']}</td>"
+      html += "<td>#{o['cost_recr']}</td></tr>"
       html += "</table>"
 
 fte=(data, n)->

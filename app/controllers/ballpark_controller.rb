@@ -50,7 +50,7 @@ class BallparkController < ApplicationController
     ]
 
     @outsource = [
-        {'item'=>'ATSS', 'init'=>75000}
+        {'item'=>'ATSS', 'init'=>110000}
     ]
 
     @rdc_servers = RdcServer.all(:order => "typename")
@@ -63,6 +63,7 @@ class BallparkController < ApplicationController
     total_num = 0
     total_num1 = 0
     total_num2 = 0
+    total_cost = 0
     output = Hash.new
     res = Hash.new
     hw = Array.new
@@ -73,12 +74,13 @@ class BallparkController < ApplicationController
       res['spec'] = @rdc_servers[id.to_i]['spec']
       res['num1']  = n['num1']
       res['num2']  = n['num2']
-      res['cost1'] = @rdc_servers[id.to_i]['cost1'] * n['num1'].to_i * @sgd_rate.to_i
-      res['cost2'] = @rdc_servers[id.to_i]['cost2'] * n['num2'].to_i * @sgd_rate.to_i
+      res['cost1'] = @rdc_servers[id.to_i]['cost1'] * n['num1'].to_i
+      res['cost2'] = @rdc_servers[id.to_i]['cost2'] * n['num2'].to_i
       total_num1  += n['num1'].to_i
       total_num2  += n['num2'].to_i
-      res['cost1'] = currency(res['cost1'], JPY, JPY)
-      res['cost2'] = currency(res['cost2'], JPY, JPY)
+      total_cost += res['cost1'] + res['cost2']
+      res['cost1'] = currency(res['cost1'], SGD, JPY)
+      res['cost2'] = currency(res['cost2'], SGD, JPY)
       output = {'item'=>res['item'], 'spec'=>res['spec'], 'num1'=>res['num1'], 'num2'=>res['num2'], 'cost1'=>res['cost1'], 'cost2'=>res['cost2'] }
       hw[id.to_i] = output
       index = id.to_i
@@ -87,22 +89,33 @@ class BallparkController < ApplicationController
 
     @san[0]['cost1'] = @san[0]['cost1'] * @san_num1.to_i
     @san[0]['cost2'] = @san[0]['cost2'] * @san_num2.to_i
+    total_cost += @san[0]['cost1'] + @san[0]['cost2']
     @san[0]['cost1'] = currency(@san[0]['cost1'], SGD, JPY)
     @san[0]['cost2'] = currency(@san[0]['cost2'], SGD, JPY)
-    hw[index+1] = {'item'=>@san[0]['item'], 'spec'=>@san[0]['spec'], 'num1'=>@san_num1, 'num2'=>@san_num2, 'cost1'=>@san[0]['cost1'], 'cost2'=>@san[0]['cost2']}
+    total_cost = currency(total_cost, SGD, JPY)
+    hw[index+1] = {'item'=>@san[0]['item'], 'spec'=>@san[0]['spec'], 'num1'=>@san_num1, 'num2'=>@san_num2, 'cost1'=>@san[0]['cost1'], 'cost2'=>@san[0]['cost2'], 'total_cost'=>total_cost}
 
     o['hw'] = hw
     
+    
+    cost_init = 0
+    cost_recr = 0
     @sw.each_with_index do |elem, i|
       if @sw[i]['target'] == 'prod'
         @sw[i]['num'] = total_num1
+        cost_init += elem['init'] * total_num1
+        cost_recr += elem['recr'] * total_num1
         @sw[i]['init'] = currency(elem['init'] * total_num1, USD, JPY)
         @sw[i]['recr'] = currency(elem['recr'] * total_num1, USD, JPY)
       elsif @sw[i]['target'] == 'all'
         @sw[i]['num'] = total_num1 + total_num2
+        cost_init += elem['init'] * (total_num1+total_num2)
+        cost_recr += elem['recr'] * (total_num1+total_num2)
         @sw[i]['init'] = currency(elem['init'] * (total_num1+total_num2), USD, JPY)
         @sw[i]['recr'] = currency(elem['recr'] * (total_num1+total_num2), USD, JPY)
       end
+      @sw[i]['cost_init'] = currency(cost_init, USD, JPY)
+      @sw[i]['cost_recr'] = currency(cost_recr, USD, JPY)
     end
     o['sw'] = @sw
 
@@ -111,7 +124,7 @@ class BallparkController < ApplicationController
     @fte[0]['ph4'] = currency(@fte[0]['ph4'] * total_num * 5, JPY, JPY)
     o['fte'] = @fte
 
-    @outsource[0]['init'] = currency(@outsource[0]['init'] * total_num * 5, JPY, JPY)
+    @outsource[0]['init'] = currency(@outsource[0]['init'] * total_num, JPY, JPY)
     o['outsource'] = @outsource
 
     render :json => o
