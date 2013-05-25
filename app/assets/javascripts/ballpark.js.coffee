@@ -15,8 +15,8 @@ $(($)->
       output_html=""
       [output_html, total1, total2] = hardware(data['hw'])
       output_html += software(data['sw'], total1, total2)
-      output_html += fte(data['fte'], total1+total2)
       output_html += outsource(data['outsource'], total1+total2)
+      output_html += fte(data['fte'], total1+total2)
 
       $('#result').html(output_html)
     )
