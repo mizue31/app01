@@ -81,5 +81,6 @@ table.result_tbl tr{
 table.result_tbl td{
     background-color: #51459d;
     text-align: center;
+    color : white;
     font-size: 8pt;
 }
