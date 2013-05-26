@@ -1,6 +1,6 @@
 
 <% @rdc_servers = RdcServer.all(:order => "typename") %>
-<%= form_tag('calc', :id=>"form_calc", :remote=>true) do %>
+<%= form_tag('/ballpark/calc', :id=>"form_calc", :remote=>true) do %>
 
   <div id="rate">
   1 SGD=<%= text_field_tag :sgd_rate, nil, :size=>6, :maxlength=>6, :value => "79.99" %>JPY,

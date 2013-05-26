@@ -6,15 +6,17 @@ a {
 }
 div#header {
     margin: 0;
-    font-size: 48pt;
+    font-size: 18pt;
     color: #51459d;
     font-family: Impact;
+    text-align: center;
 }
 div#footer {
     margin: 0;
     font-size: 6pt;
     color: #51459d;
     font-family: Impact;
+    text-align: center;
 }
 div#rate {
     margin: 0;
@@ -45,12 +47,13 @@ table.rdcservers th{
 }
       
 table.rdcservers tr {  
-      border: solid 1px #11111111;  
+    border: solid 1px #11111111;  
 }  
       
 table.rdcservers td {  
-      background-color: #51459d;
-      padding: 5px;
+    background-color: #51459d;
+    padding: 5px;
+    color: white;
 }  
       
 /* result table */
