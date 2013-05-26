@@ -94,19 +94,21 @@ fte=(data, n)->
 
       html += """
             <tr>
-            <td class=title colspan=4 align=center>fte</td>
+            <td class=title colspan=5 align=center>fte</td>
             </tr>
             <tr>
             <th>resource</th>
             <th>phase 2</th>
             <th>phase 3</th>
             <th>phase 4</th>
+            <th>recurring</th>
             </tr>
             <tr>
             <td>#{o['item']}</td>
             <td>#{o['ph2']}</td>
             <td>#{o['ph3']}</td>
             <td>#{o['ph4']}</td>
+            <td>#{o['arc']}</td>
             </tr>
             </table>
 """

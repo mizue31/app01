@@ -46,7 +46,7 @@ class BallparkController < ApplicationController
     # QG PCM => 16USD/server/year => 20SGD/server/year
 
     @fte = [
-        {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000}
+        {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000, 'arc'=>10000}
     ]
 
     @outsource = [
@@ -122,6 +122,7 @@ class BallparkController < ApplicationController
     @fte[0]['ph2'] = currency(@fte[0]['ph2'] * total_num * 2, JPY, JPY)
     @fte[0]['ph3'] = currency(@fte[0]['ph3'] * total_num, JPY, JPY)
     @fte[0]['ph4'] = currency(@fte[0]['ph4'] * total_num * 5, JPY, JPY)
+    @fte[0]['arc'] = currency(@fte[0]['arc'] * total_num, JPY, JPY)
     o['fte'] = @fte
 
     @outsource[0]['init'] = currency(@outsource[0]['init'] * total_num, JPY, JPY)
