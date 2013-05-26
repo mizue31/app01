@@ -1,7 +1,7 @@
 ---
-AXA_logo.gif: AXA_logo-c76f479fa080f3c83649b2f5a8cd55c0.gif
-Heroku.jpg: Heroku-46966c317d8b28d9f4097f6408c0ffe3.jpg
-Rails.jpg: Rails-4604ab5438b52b17932a60c463937bae.jpg
-rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
-application.js: application-1e8285fe32aa0fcbc35fe70005f34c0d.js
-application.css: application-8073e68315d3d28638e7a79735b78ee2.css
+AXA_logo.gif: AXA_logo.gif
+Heroku.jpg: Heroku.jpg
+Rails.jpg: Rails.jpg
+rails.png: rails.png
+application.js: application.js
+application.css: application.css

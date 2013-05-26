@@ -1,1 +1,215 @@
-div#header,div#footer{background-color:#909;color:#ccc}div#header{margin:0;font-size:18pt;color:#51459d;font-family:Impact;text-align:center}div#footer{margin:0;font-size:6pt;color:#51459d;font-family:Impact;text-align:center}div#rate{margin:0;text-align:center;color:#000000;font-size:8pt}table.rdcservers{width:400px;margin:0px auto;border-spacing:1;font-size:8pt;border:1px solid #ffffff}table.rdcservers th{background-color:#38306d;color:white;font-size:8pt}table.rdcservers tr{border:solid 1px #11111111}table.rdcservers td{background-color:#51459d;padding:1px;color:white}table.result_tbl{width:580px;margin:8px auto;background-color:#ffffff;border-collapse:separate;font-family:sans-serif;font-size:8pt}table.result_tbl td.title{background-color:#000031;color:white;font-size:8pt}table.result_tbl th{background-color:#38306d;color:white;font-size:8pt}table.result_tbl tr{border:solid 1px #ffffff;text-align:center;font-size:8pt}table.result_tbl td{background-color:#51459d;text-align:center;padding:1px;color:white;font-size:8pt}body{background-color:#5555be}div#wrapper{width:600px;margin:10px auto;background-color:#fff}div#header,div#footer{color:#666;margin:5px;padding:5px}div#footer{text-align:center}div#contents{background-color:#fff;color:#000;margin:5px;padding:5px;border:solid 1px #ccc;border:solid 1px #fff}body{background-color:#fff;color:#333;font-family:verdana, arial, helvetica, sans-serif;font-size:13px;line-height:18px}p,ol,ul,td{font-family:verdana, arial, helvetica, sans-serif;font-size:13px;line-height:18px}pre{background-color:#eee;padding:10px;font-size:11px}a{color:#000;color:#51459d}a:visited{color:#666;color:#51459d}a:hover{color:#fff;color:#9d4551;background-color:#000;background-color:#fff}div.field,div.actions{margin-bottom:10px}#notice{color:green}.field_with_errors{padding:2px;background-color:red;display:table}#error_explanation{width:450px;border:2px solid red;padding:7px;padding-bottom:0;margin-bottom:20px;background-color:#f0f0f0}#error_explanation h2{text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:12px;margin:-7px;margin-bottom:0px;background-color:#c00;color:#fff}#error_explanation ul li{font-size:12px;list-style:square}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+div#header, div#footer {
+  background-color: #909;
+  background-color: white;
+  color: #ccc;
+}
+/* ballpark common */
+
+
+div#header {
+    margin: 0;
+    font-size: 18pt;
+    color: #51459d;
+    color: white;;
+    font-family: Impact;
+    text-align: center;
+}
+div#footer {
+    margin: 0;
+    font-size: 6pt;
+    color: #51459d;
+    font-family: Impact;
+    text-align: center;
+}
+div#rate {
+    margin: 0;
+    text-align: center;
+    color: #000000;
+    font-size: 8pt;
+}
+
+/* rdcsever menu table */
+
+table.rdcservers {  
+    width: 400px;
+    margin: 0px auto;
+    border-spacing: 1;
+    font-size: 8pt;
+    border: 1px solid #ffffff;  
+}  
+
+table.rdcservers th{
+    background-color: #38306d;  
+    color: white;
+    font-size: 8pt;
+}
+      
+table.rdcservers tr {  
+    border: solid 1px #11111111;  
+}  
+      
+table.rdcservers td {  
+    background-color: #51459d;
+    padding: 1px;
+    color: white;
+}  
+      
+/* result table */
+
+table.result_tbl {
+    width: 580px;
+    margin: 8px auto;  
+    background-color: #ffffff;
+    border-collapse: separate;
+    font-family: sans-serif;
+    font-size: 8pt;
+}
+table.result_tbl td.title{
+    background-color: #000031;  
+    color: white;
+    font-size: 8pt;
+}
+table.result_tbl th{
+    background-color: #38306d;  
+    color: white;
+    font-size: 8pt;
+}
+table.result_tbl tr{
+    border: solid 1px #ffffff;  
+    text-align: center;
+    font-size: 8pt;
+}
+table.result_tbl td{
+    background-color: #51459d;
+    text-align: center;
+    padding: 1px;
+    color : white;
+    font-size: 8pt;
+}
+
+body {  
+      background-color: #5555be;  
+}  
+      
+div#wrapper {  
+      width: 600px;  
+      margin: 10px auto;  
+      background-color: #fff;  
+}  
+      
+div#header, div#footer {  
+      color: #666;  
+      margin: 5px;  
+      padding: 5px;  
+}  
+      
+div#footer {  
+      text-align: center;  
+}  
+      
+div#contents {  
+      background-color: #fff;  
+      color: #000;  
+      margin: 5px;  
+      padding: 5px;  
+      border: solid 1px #ccc;  
+      border: solid 1px #fff;  
+}  
+/* line 1, ../../app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, ../../app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, ../../app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, ../../app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+  color: #51459d;
+}
+/* line 24, ../../app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+  color: #51459d;
+}
+/* line 28, ../../app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  color: #9d4551;
+  background-color: #000;
+  background-color: #fff;
+}
+
+/* line 37, ../../app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 42, ../../app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 46, ../../app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 52, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 59, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 69, ../../app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

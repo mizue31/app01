@@ -14,5 +14,6 @@
 
 div#header, div#footer {
   background-color: #909;
+  background-color: white;
   color: #ccc;
 }
