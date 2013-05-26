@@ -12,10 +12,6 @@
  *= require_tree .
  */
 
-/* added 2013/5/26 */
-*= require_self
-*= require_tree .
-
 div#header, div#footer {
   background-color: #909;
   color: #ccc;
