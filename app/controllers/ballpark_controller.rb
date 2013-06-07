@@ -46,7 +46,7 @@ class BallparkController < ApplicationController
     # QG PCM => 16USD/server/year => 20SGD/server/year
 
     @fte = [
-        {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000, 'arc'=>10000}
+        {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000, 'arc'=>60500}
     ]
 
     @outsource = [
