@@ -11,7 +11,7 @@ group :test, :development do
   gem 'ci_reporter'
 end
 group :production do
- #gem 'pg'
+  gem 'pg'
 end
 
 gem 'json'
