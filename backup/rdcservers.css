@@ -1,10 +1,13 @@
-/* ballpark common */
+/* common */
 
+a {
+    text-decoration: none;
+    color: #51459d;
+}
 div#header {
     margin: 0;
     font-size: 18pt;
     color: #51459d;
-    color: white;;
     font-family: Impact;
     text-align: center;
 }
@@ -18,22 +21,27 @@ div#footer {
 div#rate {
     margin: 0;
     text-align: center;
+    background-color: #ffffff;
     color: #000000;
     font-size: 8pt;
 }
 
-/* rdcsever menu table */
+/* rdcsevers table */
 
 table.rdcservers {  
     width: 400px;
-    margin: 0px auto;
+    margin: 5px auto;
+    background-color: #ffffff;
+    border-collapse: separate;
     border-spacing: 1;
     font-size: 8pt;
     border: 1px solid #ffffff;  
 }  
 
 table.rdcservers th{
-    background-color: #38306d;  
+    background-color: #0b0031;  
+    border-collapse: separate;
+    border-spacing: 1;  
     color: white;
     font-size: 8pt;
 }
@@ -44,16 +52,14 @@ table.rdcservers tr {
       
 table.rdcservers td {  
     background-color: #51459d;
-    padding: 1px;
+    padding: 5px;
     color: white;
-    text-align: center;
-    font-size: 8pt;
 }  
       
 /* result table */
 
 table.result_tbl {
-    width: 580px;
+    width: 500px;
     margin: 8px auto;  
     background-color: #ffffff;
     border-collapse: separate;
@@ -66,7 +72,7 @@ table.result_tbl td.title{
     font-size: 8pt;
 }
 table.result_tbl th{
-    background-color: #38306d;  
+    background-color: #0b0031;  
     color: white;
     font-size: 8pt;
 }
@@ -78,8 +84,6 @@ table.result_tbl tr{
 table.result_tbl td{
     background-color: #51459d;
     text-align: center;
-    padding: 1px;
     color : white;
     font-size: 8pt;
 }
-
