@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ballpark</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %> 
+<!--  <%= stylesheet_link_tag "rdcservers",  :media=>"all" %> -->
+<!--  <%= javascript_include_tag "jquery.js", "rails.js" %> -->
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="wrapper">
+    <%= render 'shared/header' %>
+    <div id="contents">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
+  </div>
+
+</body>
+</html>
