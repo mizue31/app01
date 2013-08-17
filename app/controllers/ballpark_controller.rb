@@ -132,9 +132,7 @@ class BallparkController < ApplicationController
     o['outsource'] = @outsource
     @result_data = o
 
-#    html = render_to_string partial: "calc", collection: @result_data
-#    {html: html}
-#    render :json => @result_data
+    render :partial => "calc"
   end
 
 end
