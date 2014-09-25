@@ -5,11 +5,14 @@ gem 'rails', '3.2.8'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#group :test, :development do
-#  gem 'sqlite3'
-#  gem 'simplecov'
-#  gem 'ci_reporter'
-#end
+# for deployment on HEROKU
+
+gem "heroku"
+group :development, :test do
+  gem 'sqlite3'
+  gem 'simplecov'
+  gem 'ci_reporter'
+end
 group :production do
   gem 'pg'
 end

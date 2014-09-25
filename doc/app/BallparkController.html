@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class BallparkController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/ballpark_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-calc">#calc</a>
+    
+    <li><a href="#method-i-convert_to_JPY">#convert_to_JPY</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./BallparkController.html">BallparkController</a>
+  
+    <li><a href="./BallparkHelper.html">BallparkHelper</a>
+  
+    <li><a href="./RdcServer.html">RdcServer</a>
+  
+    <li><a href="./Server.html">Server</a>
+  
+    <li><a href="./ServersController.html">ServersController</a>
+  
+    <li><a href="./ServersHelper.html">ServersHelper</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BallparkController</h1>
+
+  <div id="description" class="description">
+    
+<p>Ballpark class body</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="JPY">JPY
+        
+        <dd class="description">
+        
+      
+        <dt id="SGD">SGD
+        
+        <dd class="description">
+        
+      
+        <dt id="USD">USD
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-calc" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">calc</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>calculation main procedure</p>
+          
+
+          
+          <div class="method-source-code" id="calc-source">
+            <pre><span class="ruby-comment"># File app/controllers/ballpark_controller.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">calc</span>
+
+  <span class="ruby-ivar">@san</span> = [
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'SAN Storage'</span>, <span class="ruby-string">'spec'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Tier2'</span>, <span class="ruby-string">'cost1'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">12.58</span>, <span class="ruby-string">'cost2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">7.37</span>}
+  ]
+
+  <span class="ruby-comment"># sw cost is based on USD</span>
+  <span class="ruby-ivar">@sw</span> = [
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Access Control(CA AC)'</span>, <span class="ruby-string">'target'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'prod'</span>, <span class="ruby-string">'num'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">224.91</span>, <span class="ruby-string">'recr'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">44.98</span>},
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Log Monitoring(RSA enVision)'</span>,      <span class="ruby-string">'target'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'prod'</span>, <span class="ruby-string">'num'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,      <span class="ruby-string">'recr'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">28.85</span>},
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Anti Virus(Symantec EPP)'</span>,      <span class="ruby-string">'target'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'all'</span>,  <span class="ruby-string">'num'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,      <span class="ruby-string">'recr'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">369</span>},
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Vulnerability Management(QualysGuard VM)'</span>,      <span class="ruby-string">'target'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'all'</span>,  <span class="ruby-string">'num'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,      <span class="ruby-string">'recr'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">23</span>},
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Configuration Policy Compliance(QualysGuard PCM)'</span>,          <span class="ruby-string">'target'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'prod'</span>, <span class="ruby-string">'num'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,    <span class="ruby-string">'recr'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">16</span>},
+  ]
+  <span class="ruby-comment"># QualysGuard PCM =&gt; 16USD/server/year =&gt; 20SGD/server/year</span>
+
+  <span class="ruby-ivar">@fte</span> = [
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'Distributed'</span>, <span class="ruby-string">'ph2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">75000</span>, <span class="ruby-string">'ph3'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">75000</span>, <span class="ruby-string">'ph4'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">75000</span>, <span class="ruby-string">'arc'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">60500</span>}
+  ]
+
+  <span class="ruby-ivar">@outsource</span> = [
+      {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">'ATSS'</span>, <span class="ruby-string">'init'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">110000</span>}
+  ]
+
+  <span class="ruby-ivar">@rdc_servers</span> = <span class="ruby-constant">RdcServer</span>.<span class="ruby-identifier">all</span>(<span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;typename&quot;</span>)
+  <span class="ruby-ivar">@rs</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:rs</span>].<span class="ruby-identifier">inspect</span>
+  <span class="ruby-ivar">@sgd_rate</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:sgd_rate</span>]
+  <span class="ruby-ivar">@usd_rate</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:usd_rate</span>]
+  <span class="ruby-ivar">@san_num1</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:san_num1</span>]
+  <span class="ruby-ivar">@san_num2</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:san_num2</span>]
+
+  <span class="ruby-identifier">total_num</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">total_num1</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">total_num2</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">total_cost</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">output</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">hw</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">o</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">params</span>[<span class="ruby-value">:rs</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>, <span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'item'</span>] = <span class="ruby-ivar">@rdc_servers</span>[<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>][<span class="ruby-string">'typename'</span>]
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'spec'</span>] = <span class="ruby-ivar">@rdc_servers</span>[<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>][<span class="ruby-string">'spec'</span>]
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'num1'</span>]  = <span class="ruby-identifier">n</span>[<span class="ruby-string">'num1'</span>]
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'num2'</span>]  = <span class="ruby-identifier">n</span>[<span class="ruby-string">'num2'</span>]
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost1'</span>] = <span class="ruby-ivar">@rdc_servers</span>[<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>][<span class="ruby-string">'cost1'</span>] * <span class="ruby-identifier">n</span>[<span class="ruby-string">'num1'</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost2'</span>] = <span class="ruby-ivar">@rdc_servers</span>[<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>][<span class="ruby-string">'cost2'</span>] * <span class="ruby-identifier">n</span>[<span class="ruby-string">'num2'</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">total_num1</span>  <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>[<span class="ruby-string">'num1'</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">total_num2</span>  <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>[<span class="ruby-string">'num2'</span>].<span class="ruby-identifier">to_i</span>
+    <span class="ruby-identifier">total_cost</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost1'</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost2'</span>]
+
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost1'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">'cost1'</span>], <span class="ruby-constant">SGD</span>)
+    <span class="ruby-identifier">res</span>[<span class="ruby-string">'cost2'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">res</span>[<span class="ruby-string">'cost2'</span>], <span class="ruby-constant">SGD</span>)
+    <span class="ruby-identifier">output</span> = {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'item'</span>], <span class="ruby-string">'spec'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'spec'</span>], <span class="ruby-string">'num1'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'num1'</span>], <span class="ruby-string">'num2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'num2'</span>], <span class="ruby-string">'cost1'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'cost1'</span>], <span class="ruby-string">'cost2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">res</span>[<span class="ruby-string">'cost2'</span>] }
+    <span class="ruby-identifier">hw</span>[<span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>] = <span class="ruby-identifier">output</span>
+    <span class="ruby-identifier">index</span> = <span class="ruby-identifier">id</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">total_num</span> = <span class="ruby-identifier">total_num1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">total_num2</span>
+
+  <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>] = <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>] * <span class="ruby-ivar">@san_num1</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>] = <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>] * <span class="ruby-ivar">@san_num2</span>.<span class="ruby-identifier">to_i</span>
+  <span class="ruby-identifier">total_cost</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>] <span class="ruby-operator">+</span> <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>]
+  <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>], <span class="ruby-constant">SGD</span>)
+  <span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>], <span class="ruby-constant">SGD</span>)
+  <span class="ruby-identifier">total_cost</span> = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">total_cost</span>, <span class="ruby-constant">SGD</span>)
+  <span class="ruby-identifier">hw</span>[<span class="ruby-identifier">index</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] = {<span class="ruby-string">'item'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'item'</span>], <span class="ruby-string">'spec'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'spec'</span>], <span class="ruby-string">'num1'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san_num1</span>, <span class="ruby-string">'num2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san_num2</span>, <span class="ruby-string">'cost1'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost1'</span>], <span class="ruby-string">'cost2'</span>=<span class="ruby-operator">&gt;</span><span class="ruby-ivar">@san</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'cost2'</span>] }
+
+  <span class="ruby-identifier">o</span>[<span class="ruby-string">'hw'</span>] = <span class="ruby-identifier">hw</span>
+  <span class="ruby-identifier">o</span>[<span class="ruby-string">'hw_total_cost'</span>] = <span class="ruby-identifier">total_cost</span>
+  
+  
+  <span class="ruby-identifier">cost_init</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">cost_recr</span> = <span class="ruby-value">0</span>
+  <span class="ruby-ivar">@sw</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">elem</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'target'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'prod'</span>
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'num'</span>] = <span class="ruby-identifier">total_num1</span>
+      <span class="ruby-identifier">cost_init</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">elem</span>[<span class="ruby-string">'init'</span>] * <span class="ruby-identifier">total_num1</span>
+      <span class="ruby-identifier">cost_recr</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">elem</span>[<span class="ruby-string">'recr'</span>] * <span class="ruby-identifier">total_num1</span>
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'init'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-string">'init'</span>] * <span class="ruby-identifier">total_num1</span>, <span class="ruby-constant">USD</span>)
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'recr'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-string">'recr'</span>] * <span class="ruby-identifier">total_num1</span>, <span class="ruby-constant">USD</span>)
+    <span class="ruby-keyword">elsif</span> <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'target'</span>] <span class="ruby-operator">==</span> <span class="ruby-string">'all'</span>
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'num'</span>] = <span class="ruby-identifier">total_num1</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">total_num2</span>
+      <span class="ruby-identifier">cost_init</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">elem</span>[<span class="ruby-string">'init'</span>] * (<span class="ruby-identifier">total_num1</span><span class="ruby-operator">+</span><span class="ruby-identifier">total_num2</span>)
+      <span class="ruby-identifier">cost_recr</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">elem</span>[<span class="ruby-string">'recr'</span>] * (<span class="ruby-identifier">total_num1</span><span class="ruby-operator">+</span><span class="ruby-identifier">total_num2</span>)
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'init'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-string">'init'</span>] * (<span class="ruby-identifier">total_num1</span><span class="ruby-operator">+</span><span class="ruby-identifier">total_num2</span>), <span class="ruby-constant">USD</span>)
+      <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'recr'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">elem</span>[<span class="ruby-string">'recr'</span>] * (<span class="ruby-identifier">total_num1</span><span class="ruby-operator">+</span><span class="ruby-identifier">total_num2</span>), <span class="ruby-constant">USD</span>)
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'cost_init'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">cost_init</span>, <span class="ruby-constant">USD</span>)
+    <span class="ruby-ivar">@sw</span>[<span class="ruby-identifier">i</span>][<span class="ruby-string">'cost_recr'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-identifier">cost_recr</span>, <span class="ruby-constant">USD</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">o</span>[<span class="ruby-string">'sw'</span>] = <span class="ruby-ivar">@sw</span>
+
+  <span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph2'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph2'</span>] * <span class="ruby-identifier">total_num</span> * <span class="ruby-value">2</span>, <span class="ruby-constant">JPY</span>)
+  <span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph3'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph3'</span>] * <span class="ruby-identifier">total_num</span>, <span class="ruby-constant">JPY</span>)
+  <span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph4'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'ph4'</span>] * <span class="ruby-identifier">total_num</span> * <span class="ruby-value">5</span>, <span class="ruby-constant">JPY</span>)
+  <span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'arc'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@fte</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'arc'</span>] * <span class="ruby-identifier">total_num</span>, <span class="ruby-constant">JPY</span>)
+  <span class="ruby-identifier">o</span>[<span class="ruby-string">'fte'</span>] = <span class="ruby-ivar">@fte</span>
+
+  <span class="ruby-ivar">@outsource</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'init'</span>] = <span class="ruby-identifier">convert_to_JPY</span>(<span class="ruby-ivar">@outsource</span>[<span class="ruby-value">0</span>][<span class="ruby-string">'init'</span>] * <span class="ruby-identifier">total_num</span>, <span class="ruby-constant">JPY</span>)
+  <span class="ruby-identifier">o</span>[<span class="ruby-string">'outsource'</span>] = <span class="ruby-ivar">@outsource</span>
+  <span class="ruby-ivar">@result_data</span> = <span class="ruby-identifier">o</span>
+
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;calc&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- calc-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- calc-method -->
+
+    
+      <div id="method-i-convert_to_JPY" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">convert_to_JPY</span><span
+            class="method-args">(number, from)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>change format of currency to ‘JPY’</p>
+
+<pre>JPY -&gt; JPY
+SGD -&gt; JPY
+USD -&gt; JPY</pre>
+          
+
+          
+          <div class="method-source-code" id="convert_to_JPY-source">
+            <pre><span class="ruby-comment"># File app/controllers/ballpark_controller.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">convert_to_JPY</span> (<span class="ruby-identifier">number</span>, <span class="ruby-identifier">from</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">from</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">JPY</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">from</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">SGD</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">number</span> = <span class="ruby-identifier">number</span> * <span class="ruby-ivar">@sgd_rate</span>.<span class="ruby-identifier">to_i</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-constant">USD</span> <span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">number</span> = <span class="ruby-identifier">number</span> * <span class="ruby-ivar">@usd_rate</span>.<span class="ruby-identifier">to_i</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">helpers</span>.<span class="ruby-identifier">number_to_currency</span>(<span class="ruby-identifier">number</span>, <span class="ruby-value">:unit=</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">JPY</span>, <span class="ruby-value">:precision=</span><span class="ruby-operator">&gt;</span><span class="ruby-value">2</span>, <span class="ruby-value">:format=</span><span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;%u %n&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- convert_to_JPY-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- convert_to_JPY-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>index page for startup</p>
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/ballpark_controller.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@rdc_servers</span> = <span class="ruby-constant">RdcServer</span>.<span class="ruby-identifier">all</span>(<span class="ruby-value">:order</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;typename&quot;</span>)
+  <span class="ruby-identifier">render</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

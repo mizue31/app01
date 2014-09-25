@@ -1,21 +1,22 @@
 # Ballpark class body
 class BallparkController < ApplicationController
+  # Ballpark controller class
 
   JPY = 'JPY'
   SGD = 'SGD'
   USD = 'USD'
 
-  # index page for startup
   def index
+    # index page for startup
     @rdc_servers = RdcServer.all(:order => "typename")
     render
   end
 
-  # change format of currency to 'JPY'
-  #   JPY -> JPY
-  #   SGD -> JPY
-  #   USD -> JPY
   def convert_to_JPY (number, from)
+    # change format of currency to 'JPY'
+    #   JPY -> JPY
+    #   SGD -> JPY
+    #   USD -> JPY
     if from != JPY
       case from
         when SGD then
@@ -27,10 +28,8 @@ class BallparkController < ApplicationController
     ActionController::Base.helpers.number_to_currency(number, :unit=>JPY, :precision=>2, :format=>"%u %n")
   end
 
-
-
-  # calculation main procedure
   def calc
+    # calculation main procedure
 
     @san = [
         {'item'=>'SAN Storage', 'spec'=>'Tier2', 'cost1'=>12.58, 'cost2'=>7.37}
@@ -117,8 +116,8 @@ class BallparkController < ApplicationController
         @sw[i]['init'] = convert_to_JPY(elem['init'] * (total_num1+total_num2), USD)
         @sw[i]['recr'] = convert_to_JPY(elem['recr'] * (total_num1+total_num2), USD)
       end
-      @sw[i]['cost_init'] = convert_to_JPY(cost_init, USD)
-      @sw[i]['cost_recr'] = convert_to_JPY(cost_recr, USD)
+      @sw[0]['cost_init'] = convert_to_JPY(cost_init, USD)
+      @sw[0]['cost_recr'] = convert_to_JPY(cost_recr, USD)
     end
     o['sw'] = @sw
 
