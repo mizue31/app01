@@ -49,6 +49,9 @@ class BallparkController < ApplicationController
         {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000, 'arc'=>60500}
     ]
 
+    # DR unit cost = 419 SGD per production server
+    dr_unit_cost = 419
+
     @outsource = [
         {'item'=>'ATSS', 'init'=>110000}
     ]
@@ -72,8 +75,8 @@ class BallparkController < ApplicationController
     params[:rs].each do |id, n|
       res['item'] = @rdc_servers[id.to_i]['typename']
       res['spec'] = @rdc_servers[id.to_i]['spec']
-      res['num1']  = n['num1']
-      res['num2']  = n['num2']
+      res['num1']  = n['num1'] # num of prod servers
+      res['num2']  = n['num2'] # num of non-prod servers
       res['cost1'] = @rdc_servers[id.to_i]['cost1'] * n['num1'].to_i
       res['cost2'] = @rdc_servers[id.to_i]['cost2'] * n['num2'].to_i
       total_num1  += n['num1'].to_i
@@ -99,7 +102,10 @@ class BallparkController < ApplicationController
     o['hw'] = hw
     o['hw_total_cost'] = total_cost
     
+    # DR costing
+    o['dr'] = convert_to_JPY(total_num1 * dr_unit_cost, SGD)
     
+    # SW costing
     cost_init = 0
     cost_recr = 0
     @sw.each_with_index do |elem, i|
