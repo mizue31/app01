@@ -4,19 +4,19 @@
 
 $(($)->
   $('#form_calc')
-    .live("ajax:complete", (xhr)->
+    .on("ajax:complete", (xhr)->
       #alert("done")
       #$('#result').append('<div>Done.</div>')
     )
-    .live("ajax:beforeSend", (xhr)->
+    .on("ajax:beforeSend", (xhr)->
       $('#result').html('<div>Loading...</div>')
     )
-    .live("ajax:success", (event, data, status, xhr)->
+    .on("ajax:success", (event, data, status, xhr)->
       $('#result').html('<div>Success1...</div>')
       $('#result').empty()
       $('#result').html(data)
     )
-    .live("ajax:error", (data, status, xhr)->
+    .on("ajax:error", (data, status, xhr)->
       alert("failure!!!")
     )
 )
