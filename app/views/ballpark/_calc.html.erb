@@ -38,14 +38,6 @@
 
 
 
-<table id='result_tbl' class='result_tbl'>
-<tr>
-<td class="title" colspan=1 align=center>DR testing</td>
-</tr>
-<tr>
- <td><%= @result_data['dr'] %></td>
-</tr>
-</table>
 
 
 <table id='result_tbl' class='result_tbl'>
@@ -83,15 +75,19 @@
 <table id='result_tbl' class='result_tbl'>
 <% o = @result_data['outsource'][0] %>
 <tr>
-<td class="title" colspan=2 align=center>outsource service</td>
+<td class="title" align=center>outsource service</td>
 </tr>
 <tr>
-<th>outsource</th>
-<th>cost</th>
+<th>implementation (initial)</th>
 </tr>
 <tr>
 <td><%= o['init'] %></td>
-<td><%= o['init'] %></td>
+</tr>
+<tr>
+<th>DR test (recurring)</th>
+</tr>
+<tr>
+<td><%= @result_data['dr'] %></td>
 </tr>
 </table>
 
