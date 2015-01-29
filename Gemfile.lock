@@ -56,8 +56,6 @@ GEM
       multi_json (~> 1.8)
     hike (1.2.3)
     i18n (0.7.0)
-    i18n-js (2.1.2)
-      i18n
     journey (1.0.4)
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
@@ -142,7 +140,6 @@ DEPENDENCIES
   ci_reporter
   coffee-rails (~> 3.2.1)
   heroku
-  i18n-js
   jquery-rails
   json
   newrelic_rpm

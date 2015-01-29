@@ -50,6 +50,6 @@ gem 'jquery-rails'
 
 gem 'rack-contrib', :require => 'rack/contrib'
 gem 'prototype-rails'
-gem 'i18n-js'
+#gem 'i18n-js'
 
 gem 'newrelic_rpm'
