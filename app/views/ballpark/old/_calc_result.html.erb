@@ -1,34 +1,119 @@
-Ballpark
-
-<% @rdc_servers = RdcServer.all(:order => "typename") %>
-<%= form_tag :action => :calc, :remote=>true do %>
-
-  <table class="rdcservers">
-    <col class="typename" />
-    <col class="spec" />
-    <col class="num" />
+<table id='result_tbl' class='result_tbl'>
+<col class="vm type" />
+<col class="num(prd)" />
+<col class="num(non-prd)" />
+<col class="cost(prd>" />
+<col class="cost(non-prd>" />
+<tr>
+<td colspan=5 align=center>hardware</td>
+</tr>
+<tr>
+<th>hw item</th>
+<th>num(prd)</th>
+<th>num(non-prd)</th>
+<th>arc(prd)</th>
+<th>arc(non-prd)</th>
+</tr>
+<% data_hw = @result_data['hw'] %>
+<% total1 = 0 %>
+<% total2 = 0 %>
+<% data_hw.size !=0 && data_hw.each do |o| %>
+  <% if o['num1'] != "0" or o['num2'] != "0" then %>
     <tr>
-    <th>Type</th>
-    <th>Spec</th>
-    <th>Num</th>
+    <td><%= o['item'] -%> <%= o['spec'] %></td>
+    <td><%= o['num1'] %></td>
+    <td><%= o['num2'] %></td>
+    <td><%= o['cost1'] %></td>
+    <td><%= o['cost2'] %></td>
     </tr>
-
-    <% @rdc_servers.each_with_index do |rs,i| %>
-    <% @rs = rs %>
-      <tr>
-        <td><%= rs.typename %></td>
-        <td><%= rs.spec %></td>
-        <td><%= text_field 'rs[]', 'num', :size=>3, :maxlength=>2, :index=>i %></td>
-      </tr>
+    <% total1 += o['num1'].to_i %>
+    <% total2 += o['num2'].to_i %>
   <% end %>
-  </table>
-
-  <div id='submit' align='center'>
-    <%= submit_tag "CALC" %>
-  </div>
-
 <% end %>
+<tr>
+<td>total arc</td>
+<td colspan=4><%= @result_data['hw_total_cost'] %></td>
+</tr>
+</table>
 
-<div id="result">
- <%= @rs %>
-</div>
+
+
+<table id='result_tbl' class='result_tbl'>
+<tr>
+<td class="title" colspan=1 align=center>DR testing</td>
+</tr>
+<tr>
+ <td><%= @result_data['dr'] %></td>
+</tr>
+</table>
+
+
+<table id='result_tbl' class='result_tbl'>
+<tr>
+<td class="title" colspan=4 align=center>software</td>
+</tr>
+<tr>
+<th>sw item</th>
+<th>num</th>
+<th>init</th>
+<th>arc</th>
+</tr>
+<% data_sw = @result_data['sw'] %>
+<% n1 = total1 %>
+<% n2 = total2 %>
+<% data_sw.size != 0 && data_sw.each do |o| %>
+  <% if n1 != 0 or n2 != 0 then %>
+    <tr>
+    <td><%= o['item'] %></td>
+    <td><%= o['num'] %></td>
+    <td><%= o['init'] %></td>
+    <td><%= o['recr'] %></td>
+    <tr>
+  <% end %>
+<% end %>
+  <tr>
+  <td colspan=2>total</td>
+  <td><%= data_sw[0]['cost_init'] %></td>
+  <td><%= data_sw[0]['cost_recr'] %></td>
+  </tr>
+</table>
+
+
+
+<table id='result_tbl' class='result_tbl'>
+<% o = @result_data['outsource'][0] %>
+<tr>
+<td class="title" colspan=2 align=center>outsource service</td>
+</tr>
+<tr>
+<th>outsource</th>
+<th>cost</th>
+</tr>
+<tr>
+<td><%= o['init'] %></td>
+<td><%= o['init'] %></td>
+</tr>
+</table>
+
+
+
+<table id='resut_tbl' class='result_tbl'>
+<% o = @result_data['fte'][0] %>
+<tr>
+<td class="title" colspan=5 align=center>fte</td>
+</tr>
+<tr>
+<th>resource</th>
+<th>phase 2</th>
+<th>phase 3</th>
+<th>phase 4</th>
+<th>recurring</th>
+</tr>
+<tr>
+<td><%= o['item'] %></td>
+<td><%= o['ph2'] %></td>
+<td><%= o['ph3'] %></td>
+<td><%= o['ph4'] %></td>
+<td><%= o['arc'] %></td>
+</tr>
+</table>

@@ -98,7 +98,6 @@
 
 
 <table id='resut_tbl' class='result_tbl'>
-<% o = @result_data['fte'][0] %>
 <tr>
 <td class="title" colspan=5 align=center>fte</td>
 </tr>
@@ -109,6 +108,10 @@
 <th>phase 4</th>
 <th>recurring</th>
 </tr>
+
+<% data_fte = @result_data['fte'] %>
+<% data_fte.size != 0 && data_fte.each do |o| %>
+
 <tr>
 <td><%= o['item'] %></td>
 <td><%= o['ph2'] %></td>
@@ -116,4 +119,6 @@
 <td><%= o['ph4'] %></td>
 <td><%= o['arc'] %></td>
 </tr>
+
+<% end %>
 </table>

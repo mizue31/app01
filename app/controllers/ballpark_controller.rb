@@ -46,7 +46,11 @@ class BallparkController < ApplicationController
     # QualysGuard PCM => 16USD/server/year => 20SGD/server/year
 
     @fte = [
-        {'item'=>'Distributed', 'ph2'=>75000, 'ph3'=>75000, 'ph4'=>75000, 'arc'=>60500}
+        {'item'=>'PM', 'ph2'=>140000, 'ph3'=>70000, 'ph4'=>35000, 'arc'=>0},
+        {'item'=>'Distributed', 'ph2'=>70000, 'ph3'=>70000, 'ph4'=>70000, 'arc'=>60500},
+        {'item'=>'Networks', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'GRSC', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'SDA', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0}
     ]
 
     # DR unit cost = 419 SGD per production server
@@ -127,10 +131,18 @@ class BallparkController < ApplicationController
     end
     o['sw'] = @sw
 
-    @fte[0]['ph2'] = convert_to_JPY(@fte[0]['ph2'] * total_num * 2, JPY)
-    @fte[0]['ph3'] = convert_to_JPY(@fte[0]['ph3'] * total_num, JPY)
-    @fte[0]['ph4'] = convert_to_JPY(@fte[0]['ph4'] * total_num * 5, JPY)
-    @fte[0]['arc'] = convert_to_JPY(@fte[0]['arc'] * total_num, JPY)
+    # FTE costing
+    #@fte[0]['ph2'] = convert_to_JPY(@fte[0]['ph2'] * total_num * 2, JPY)
+    #@fte[0]['ph3'] = convert_to_JPY(@fte[0]['ph3'] * total_num, JPY)
+    #@fte[0]['ph4'] = convert_to_JPY(@fte[0]['ph4'] * total_num * 5, JPY)
+    #@fte[0]['arc'] = convert_to_JPY(@fte[0]['arc'] * total_num, JPY)
+
+    @fte.each_with_index do |elem,i|
+        elem['ph2'] = convert_to_JPY(elem['ph2'] * 5, JPY)
+        elem['ph3'] = convert_to_JPY(elem['ph3'] * 5, JPY)
+        elem['ph4'] = convert_to_JPY(elem['ph4'] * total_num * 5, JPY)
+        elem['arc'] = convert_to_JPY(elem['arc'] * total_num, JPY)
+    end
     o['fte'] = @fte
 
     @outsource[0]['init'] = convert_to_JPY(@outsource[0]['init'] * total_num, JPY)

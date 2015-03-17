@@ -105,6 +105,10 @@
 <th>phase 4</th>
 <th>recurring</th>
 </tr>
+
+<% data_fte = @result_data['fte'] %>
+<% data_fte.size != 0 && data_fte.each do |o| %>
+
 <tr>
 <td><%= o['item'] %></td>
 <td><%= o['ph2'] %></td>
@@ -112,4 +116,6 @@
 <td><%= o['ph4'] %></td>
 <td><%= o['arc'] %></td>
 </tr>
+
+<% end %>
 </table>
