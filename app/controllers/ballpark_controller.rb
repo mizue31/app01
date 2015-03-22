@@ -46,10 +46,13 @@ class BallparkController < ApplicationController
     # QualysGuard PCM => 16USD/server/year => 20SGD/server/year
 
     @fte = [
-        {'item'=>'PM', 'ph2'=>140000, 'ph3'=>70000, 'ph4'=>35000, 'arc'=>0},
         {'item'=>'Distributed', 'ph2'=>70000, 'ph3'=>70000, 'ph4'=>70000, 'arc'=>60500},
         {'item'=>'Networks', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'Workplaces', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'App Service', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'Mainframe', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
         {'item'=>'GRSC', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0},
+        {'item'=>'PM', 'ph2'=>140000, 'ph3'=>70000, 'ph4'=>35000, 'arc'=>0},
         {'item'=>'SDA', 'ph2'=>70000, 'ph3'=>0, 'ph4'=>0, 'arc'=>0}
     ]
 
