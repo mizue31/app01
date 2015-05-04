@@ -6,9 +6,13 @@ class BallparkController < ApplicationController
   SGD = 'SGD'
   USD = 'USD'
 
+  def rdcserver_params
+    params.require(:RdcServer).permit(:cost1, :cost2, :spec, :typename, :num1, :num2)
+  end
   def index
     # index page for startup
-    @rdc_servers = RdcServer.all(:order => "typename")
+    #@rdc_servers = RdcServer.all(:order => "typename")
+    @rdc_servers = RdcServer.order("typename").load
     render
   end
 

@@ -1,5 +1,5 @@
 
-<% @rdc_servers = RdcServer.all(:order => "typename") %>
+<% @rdc_servers = RdcServer.order("typename").load %>
 <%= form_tag({:action=>"calc"}, :id=>"form_calc", :remote=>true) do %>
 
   <div id="rate">
