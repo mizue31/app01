@@ -3,6 +3,18 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 
+### add from here for turnip
+require 'rspec/autorun'
+Dir.glob("spec/**/*steps.rb") {|f| load f, true}
+require 'capybara/dsl'
+require 'capybara/rspec'
+require 'capybara/webkit'
+require 'capybara/poltergeist'
+require 'turnip'
+require 'turnip/capybara'
+Capybara.javascript_driver = :poltergeist
+### add to here
+
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
 # run as spec files by default. This means that files in spec/support that end

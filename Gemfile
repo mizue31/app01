@@ -14,6 +14,10 @@ group :development, :test do
   gem 'simplecov'
   gem 'ci_reporter'
   gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'poltergeist'
+  gem 'turnip'
 end
 
 group :production do
