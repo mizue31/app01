@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-RSpec.describe RdcServer, :type => :model do
+describe RdcServer, :type => :model do
 	it "isn't valid without typename and num1" do
 		data = RdcServer.new
 		expect(data).not_to be_valid
 	end
-	it "isn't valid with over 10 in num1" do
+	it "isn't valid with greater than 10 in num1" do
 		data = RdcServer.new
 		data.num1 = 11
 		data.typename = "typename1"
