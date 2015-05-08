@@ -1,4 +1,4 @@
-App00::Application.routes.draw do
+App01::Application.routes.draw do
 
   #resources :ballpark, only:[:calc, :index, :rdcserver_params]
   resources :ballpark do
