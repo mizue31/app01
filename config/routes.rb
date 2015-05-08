@@ -1,4 +1,4 @@
-App01::Application.routes.draw do
+App00::Application.routes.draw do
 
   #resources :ballpark, only:[:calc, :index, :rdcserver_params]
   resources :ballpark do
@@ -9,6 +9,9 @@ App01::Application.routes.draw do
 		get 'rdcserer_params'
 	end
   end
+
+  # add route for root
+  root 'ballpark#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -15,11 +15,12 @@ group :development, :test do
   gem 'ci_reporter'
   gem 'rspec-rails', '~> 2.0'
 end
+
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
-gem 'protected_attributes'
 gem 'json'
 
 # Gems used only for assets and not required
