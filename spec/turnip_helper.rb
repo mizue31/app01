@@ -4,8 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 
 ### add from here for turnip
-Dir.glob("spec/**/*steps.rb") {|f| load f, true}
 require 'rspec/autorun'
+Dir.glob("spec/**/*steps.rb") {|f| load f, true}
 require 'capybara/dsl'
 require 'capybara/rspec'
 require 'capybara/webkit'

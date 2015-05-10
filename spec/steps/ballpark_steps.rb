@@ -1,13 +1,14 @@
+
 step 'start ballpark' do
-	Capybara.app_host 'http://app00.herokuapp.com/'
+	Capybara.app_host = 'http://localhost:3000/ballpark'
 end
 
 step 'open top page' do
-	Capybara.app_host '/ballpark'
+	visit '/'
 end
 
 step 'input :val to :fld' do |val, fld|
-	fill_in(fld, :with => val)
+	fill_in fld, :with => val
 end
 
 step 'click :btn button' do |btn|
@@ -18,7 +19,9 @@ step 'display character :str' do |str|
 	expect(page).to have_content(str)
 end
 
-step 'display calc result' do
-	current_path = URI.(current_url).path
-	current_path.should == '/ballpark/calc'
+step 'display result character :str' do |str|
+	expect(page).to have_content(str)
+	current_path = URI.parse(current_url).path
+	current_path.should == '/ballpark/'
+#	save_and_open_page
 end
