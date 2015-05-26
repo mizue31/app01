@@ -18,6 +18,7 @@ group :development, :test do
   gem 'capybara-webkit'
   gem 'poltergeist'
   gem 'turnip'
+  gem 'therubyracer'
 end
 
 group :production do
