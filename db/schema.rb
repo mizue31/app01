@@ -20,15 +20,15 @@ ActiveRecord::Schema.define(version: 20121111004048) do
     t.integer  "cost2"
     t.integer  "num1"
     t.integer  "num2"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "servers", force: true do |t|
     t.string   "hostname"
     t.string   "ip_addr1"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
